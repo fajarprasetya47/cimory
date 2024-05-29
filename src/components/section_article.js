@@ -57,7 +57,7 @@ export default function Article() {
         <>
             <Container className="mt-[64px]">
                 <Box>
-                    <p className="text-[#404484] text-[40px] font-bold">Artikel Baru Dairyland & Minimania</p>
+                    <p className="text-[#404484] md:text-[40px] text-[36px] font-bold">Artikel Baru Dairyland & Minimania</p>
                 </Box>
                 <Box className="mt-[32px]">
                     <Swiper

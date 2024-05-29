@@ -57,8 +57,8 @@ export default function Destination() {
         <>
             <Container className="mt-[64px]">
                 <Box>
-                    <p className="text-[#404484] text-[40px] font-bold">Destinasi Tujuan</p>
-                    <p className="font-semibold text-black text-[20px]">Dairyland tersebar lebih dari 7 titik di seluruh Indonesia</p>
+                    <p className="text-[#404484] md:text-[40px] text-[36px] font-bold">Destinasi Tujuan</p>
+                    <p className="font-semibold text-black md:text-[20px] text-[16px] ">Dairyland tersebar lebih dari 7 titik di seluruh Indonesia</p>
                 </Box>
                 <Box className="mt-[32px]">
                     <Swiper

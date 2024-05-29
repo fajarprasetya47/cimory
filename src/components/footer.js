@@ -1,9 +1,17 @@
+import { Box } from "@mui/material"
+
 export default function Footer() {
     return (
-        <footer class="relative bottom-0 lg:mt-10 lg:w-full lg:h-auto bg-pack-footdairy bg-center bg-no-repeat lg:bg-cover bg-contain">
-            <div className="container max-w-screen-xl mx-auto">
-                <div class="relative lg:pt-[100px] mt-10 w-full grid grid-cols-3 gap-0 lg:grid-cols-4 justify-center lg:px-[110px]">
-                    <div class="lg:mx-0 mx-auto">
+        <footer class="relative bottom-0 lg:mt-10 lg:w-full lg:h-auto">
+            <Box
+                sx={{
+                    background: 'url(image/bg-footer.png)',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                }}
+                className="container max-w-screen-xl">
+                <Box class="flex justify-center flex-row sm:gap-12 gap-4">
+                    <div class="">
                         <h2 class="lg:mb-10 mb-2 lg:text-[18px] text-[10px] font-bold text-[#404484] font-poppins">Perusahaan</h2>
                         <ul class="text-black font-normal lg:text-[14px] text-[9px]">
                             <li class="mb-2">
@@ -23,7 +31,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div class="lg:-ml-10">
+                    <div class="">
                         <h2 class="lg:mb-10 mb-2 lg:text-[18px] text-[10px] font-bold text-[#404484] font-poppins">Bantuan</h2>
                         <ul class="text-black font-normal lg:text-[14px] text-[9px]">
                             <li class="mb-2">
@@ -43,7 +51,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div class="lg:-ml-[90px] -ml-8">
+                    <div class="">
                         <h2 class="lg:mb-10 mb-2 lg:text-[18px] text-[10px] font-bold text-[#404484] font-poppins">Newsletter</h2>
                         <ul class="text-black font-normal lg:text-[14px] text-[9px]">
                             <li class="mb-[18px] lg:w-[270px] w-[140px] leading-1">
@@ -59,9 +67,8 @@ export default function Footer() {
 
                         </ul>
                     </div>
-
-                </div>
-            </div>
+                </Box>
+            </Box>
             <div class="relative bottom-0 lg:mt-40 mt-0 lg:py-2 py-1 bg-gradient-to-r from-[#404484] via-[#404484] to-[#404484] text-center">
                 <span class="text-center text-white lg:text-[14px] text-[10px] font-normal">
                     <a href="/" class="">Copyright Dairyland All Right Reserved © 2024</a>

@@ -26,9 +26,9 @@ export default function Product() {
     return (
         <>
             <Container className="mt-[64px]">
-                <Box className="flex justify-between gap-8">
+                <Box className="flex md:flex-row flex-col justify-between gap-8">
                     <Box
-                        className="h-[500px] w-[340px] rounded-lg"
+                        className="md:h-[500px] h-[250px] w-[340px] rounded-lg"
                         sx={{
                             background: `url(${selected.img})`,
                             backgroundPosition: 'center',
@@ -36,13 +36,13 @@ export default function Product() {
                         }}
                     >
                     </Box>
-                    <Box className="md:w-3/5 w-full flex flex-col gap-14">
+                    <Box className="md:w-3/5 w-full flex flex-col md:gap-14 gap-7">
                         <Box>
-                            <p className="text-[24px] font-semibold text-black">Bawa Pulang</p>
-                            <p className="text-[#404484] text-[36px] font-bold">Kenangan Mengesankan</p>
-                            <p className="font-semibold text-black">Berwisata, Berkuliner, dan Berbelanja untuk Momen Terbaikmu disini</p>
+                            <p className="sm:text-[24px] text-[20px] font-semibold text-black">Bawa Pulang</p>
+                            <p className="text-[#404484] sm:text-[36px] text-[28px] font-bold">Kenangan Mengesankan</p>
+                            <p className="font-semibold text-black sm:text-[16px] text-[14px]">Berwisata, Berkuliner, dan Berbelanja untuk Momen Terbaikmu disini</p>
                         </Box>
-                        <Box className="flex flex-col gap-8">
+                        <Box className="flex flex-col md:gap-8 gap-4">
                             {menu.map((item) => {
                                 let cls = "";
                                 if (item.name == selected.name) cls = "active";

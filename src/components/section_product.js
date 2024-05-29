@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Product() {
-    const menu = [
+    const product = [
         {
             name: "Destinasi",
             desc: "Jelajahi berbagai wahana seru, pertunjukan menarik, dan nikmati aktivitas menyenangkan dan ciptakan momen indah tak terlupakan bersama keluarga tercinta.",
@@ -22,7 +22,7 @@ export default function Product() {
         },
     ];
     const [open, setOpen] = useState(false);
-    const [selected, setSelected] = useState(menu[0]);
+    const [selected, setSelected] = useState(product[0]);
     return (
         <>
             <Container className="mt-[64px]">
@@ -43,7 +43,7 @@ export default function Product() {
                             <p className="font-semibold text-black sm:text-[16px] text-[14px]">Berwisata, Berkuliner, dan Berbelanja untuk Momen Terbaikmu disini</p>
                         </Box>
                         <Box className="flex flex-col md:gap-8 gap-4">
-                            {menu.map((item) => {
+                            {product?.map((item) => {
                                 let cls = "";
                                 if (item.name == selected.name) cls = "active";
                                 return (

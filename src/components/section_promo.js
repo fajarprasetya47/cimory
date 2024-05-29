@@ -43,7 +43,7 @@ export default function Promo() {
                         {promo?.map((item) => (
                             <SwiperSlide>
                                 <Box
-                                    className="md:h-[350px] md:w-[1000px] sm:w-[500px] h-[175px] rounded-lg"
+                                    className="md:h-[350px] md:w-[1000px] sm:w-[500px] w-[450px] h-[175px] rounded-lg"
                                     sx={{
                                         background: `url(${item.img})`,
                                         backgroundSize: 'cover',

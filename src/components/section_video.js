@@ -20,10 +20,9 @@ export default function Video() {
                     <div class="container flex items-center justify-center mx-auto  lg:py-8  py-2">
                         <p class="lg:w-[400px] w-[300px]  text-center text-white lg:text-[16px] text-[12px] font-normal">Tonton video keseruan di Dairyland dan temukan ide untuk liburan keluarga Anda!</p>
                     </div>
-                    <div class="relative lg:py-1 py-2 container mx-auto lg:px-36 px-1 justify-center lg:max-w-auto max-w-auto  lg:w-5/6 w-full -">
+                    <div class="relative lg:py-1 py-2 container mx-auto lg:px-36 px-1 justify-center lg:max-w-auto max-w-auto w-full ">
                         <div class="relative lg:w-[750px] w-max-auto mx-auto max-w-screen-xl">
                             <iframe class="lg:w-[100%]  lg:h-[450px] h-[200px] w-[85%]  shadow-md shadow-gray-600 rounded-lg container mx-auto " src="https://www.youtube.com/embed/_g0EAQafWEE?si=97OOHPYAahe_x4SC&amp;amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-
                         </div>
                     </div>
                 </div>

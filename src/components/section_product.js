@@ -28,7 +28,7 @@ export default function Product() {
             <Container className="mt-[64px]">
                 <Box className="flex md:flex-row flex-col justify-between gap-8">
                     <Box
-                        className="md:h-[500px] h-[250px] w-[340px] rounded-lg"
+                        className="md:h-[500px] h-[250px] sm:w-[340px] w-full rounded-lg"
                         sx={{
                             background: `url(${selected.img})`,
                             backgroundPosition: 'center',

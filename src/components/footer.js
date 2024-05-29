@@ -9,8 +9,9 @@ export default function Footer() {
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
                 }}
-                className="container max-w-screen-xl">
-                <Box class="flex justify-center flex-row sm:gap-12 gap-4">
+                // className="container max-w-screen-xl"
+            >
+                <Box className="flex justify-center sm:gap-12 gap-4 pb-4">
                     <div class="">
                         <h2 class="lg:mb-10 mb-2 lg:text-[18px] text-[10px] font-bold text-[#404484] font-poppins">Perusahaan</h2>
                         <ul class="text-black font-normal lg:text-[14px] text-[9px]">
@@ -69,7 +70,7 @@ export default function Footer() {
                     </div>
                 </Box>
             </Box>
-            <div class="relative bottom-0 lg:mt-40 mt-0 lg:py-2 py-1 bg-gradient-to-r from-[#404484] via-[#404484] to-[#404484] text-center">
+            <div class="relative bottom-0 lg:py-2 py-1 bg-gradient-to-r from-[#404484] via-[#404484] to-[#404484] text-center">
                 <span class="text-center text-white lg:text-[14px] text-[10px] font-normal">
                     <a href="/" class="">Copyright Dairyland All Right Reserved © 2024</a>
                 </span>

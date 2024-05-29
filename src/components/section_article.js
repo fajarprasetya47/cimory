@@ -1,4 +1,4 @@
-import { Close, Menu } from "@mui/icons-material";
+import { Close, KeyboardArrowLeft, KeyboardArrowRight, Menu } from "@mui/icons-material";
 import { Box, Button, Container, Drawer, IconButton, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { useState } from "react";
@@ -8,7 +8,7 @@ import "swiper/css";
 
 export function CardSmall({
     title = "Dairyland",
-    subtitle = "Dairyland",
+    subtitle,
     image = 'image/sakura.jpeg',
     withButton = false,
 }) {
@@ -23,7 +23,9 @@ export function CardSmall({
                 className="h-[175px] rounded-t-[16px]"
             ></Box>
             <Box className="px-6 mt-2">
-                <p className="text-[#404484] font-bold text-[18px]">{title}</p>
+                <Box sx={{ maxHeight: '60px', display: '-webkit-box', overflow: "hidden", textOverflow: 'ellipsis', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', }}>
+                    <p className="text-[#404484] font-bold text-[18px]">{title}</p>
+                </Box>
                 <p className="text-[#E02424] text-[12px]">{subtitle}</p>
             </Box>
             <Box className="px-6 my-2 text-black text-[12px] flex justify-end">
@@ -34,61 +36,77 @@ export function CardSmall({
 }
 
 export default function Article() {
-    const menu = [
+    const article = [
         {
-            name: "Destinasi",
-            desc: "Jelajahi berbagai wahana seru, pertunjukan menarik, dan nikmati aktivitas menyenangkan dan ciptakan momen indah tak terlupakan bersama keluarga tercinta.",
+            title: "Berikut adalah 5 hewan yang dapat berinteraksi denganmu di Dairyland!",
             img: "image/cimory-wisata.jpeg",
         },
         {
-            name: "Restaurant",
-            desc: "Cicipi berbagai menu makanan dan minuman khas Dairyland. Temukan pengalaman bersantap yang menyenangkan dan memuaskan di Dairyland Restaurant.",
-            img: "image/cimory-resto.jpeg",
+            title: "Nikmati liburan berkesan di Taman Sakura",
+            img: "image/sakura.jpeg",
         },
         {
-            name: "Cimory Shop",
-            desc: "Temukan berbagai produk Cimory, Chocomory, merchandise unik, dan souvenir menarik lainnya. Lengkapi pengalaman Dairyland Anda di Dairyland Shop.",
-            img: "image/cimory-shop.jpeg",
+            title: "7 alasan Dairyland adalah wisata terbaik untuk Anda dan keluarga!",
+            img: "image/cimory-riverside.jpeg",
+        },
+        {
+            title: "Berikut adalah 5 hewan yang dapat berinteraksi denganmu di Dairyland!",
+            img: "image/cimory-wisata.jpeg",
+        },
+        {
+            title: "Nikmati liburan berkesan di Taman Sakura",
+            img: "image/sakura.jpeg",
+        },
+        {
+            title: "7 alasan Dairyland adalah wisata terbaik untuk Anda dan keluarga!",
+            img: "image/cimory-riverside.jpeg",
         },
     ];
-    const [open, setOpen] = useState(false);
-    const [selected, setSelected] = useState(menu[0]);
     return (
         <>
             <Container className="mt-[64px]">
-                <Box>
+                <Box className="flex justify-between items-center gap-8 flex-wrap">
                     <p className="text-[#404484] md:text-[40px] text-[36px] font-bold">Artikel Baru Dairyland & Minimania</p>
+                    <Box>
+                        <button className="text-[#404484] border border-[#404484] px-[24px] md:py-[12px] py-[8px] rounded-lg text-[13px]">Lihat Semua Artikel</button>
+                    </Box>
                 </Box>
                 <Box className="mt-[32px]">
                     <Swiper
                         breakpoints={{
-                            575: { slidesPerView: 3 },
-                            768: { slidesPerView: 4 },
+                            768: { slidesPerView: 3 },
+                            1024: { slidesPerView: 4 },
                         }}
-                        speed={1000}
+                        speed={800}
                         modules={[Navigation, Scrollbar]}
                         spaceBetween={32}
                         slidesPerView={2}
-                    // navigation={{
-                    //     nextEl: ".next-btn-icon",
-                    //     prevEl: ".prev-btn-icon",
-                    // }}
+                        navigation={{
+                            nextEl: ".next-article",
+                            prevEl: ".prev-article",
+                        }}
                     >
-                        {/* {listApp?.map((item) => ( */}
-                        <SwiperSlide>
-                            <CardSmall />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <CardSmall />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <CardSmall />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <CardSmall />
-                        </SwiperSlide>
-                        {/* ))} */}
+                        {article?.map((item) => (
+                            <SwiperSlide>
+                                <CardSmall
+                                    title={item.title}
+                                    image={item.img}
+                                />
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
+                    <Box className="flex gap-8 justify-end mt-8">
+                        <Box>
+                            <IconButton className="prev-article">
+                                <KeyboardArrowLeft sx={{ color: '#404484', fontSize: '35px' }} />
+                            </IconButton>
+                        </Box>
+                        <Box>
+                            <IconButton className="next-article">
+                                <KeyboardArrowRight sx={{ color: '#404484', fontSize: '35px' }} />
+                            </IconButton>
+                        </Box>
+                    </Box>
                 </Box>
             </Container>
         </>
